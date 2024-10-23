@@ -107,6 +107,9 @@ export default withNuxt(
       // project
       'curly': ['warn', 'all'],
       'dot-notation': 'error',
+      'block-no-empty': 'off',
+      'vue/html-self-closing': 'off',
+      '@stylistic/brace-style': 'off',
     },
     overrides: [],
   }),

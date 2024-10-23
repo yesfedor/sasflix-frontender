@@ -1,24 +1,24 @@
-# Nuxt Core Template
+# Sasflix Frontender
 
-This project is a template, for quickly getting started on your new project.
-When creating the template, many requests from businesses were taken into account, and the convenience of development.
+Задача: Реализовать приложение с общим списком постов и отдельными страницами с комментариями. Код на Nuxt3/Vue3, TypeScript и Pinia, и разбит на компоненты.
+
+### Приложения должно:
+
+повторять макет в Фигме;
+- выводить первые 5 постов из API на общей странице;
+- быть написано без использования готовых библиотек компонентов;
+- иметь кликабельные кнопки лайка и дизлайка;
+- удалять комментарии, изменять значении и стили кнопок локально.
 
 ---
 
-### About
+### Памятка смотрящим
 
-Thus, the following plugins are now configured and supported:
-
-1. DotEnv files in [environments](./environments) folder supported stage with balanced setting: local, dev, stage, prod
-2. Typescript 5 + Vue 3 + Nuxt 3
-3. Eslint, Stylelint (without lint-staged)
-4. SCSS
-5. Consola - To wrap the logs
-6. Mitt - Global emitter
-7. VueUse - for support function
-8. Lodash-es - for data manipulation
-9. VeeValidate with yup - data validation and scheme organizer
-10. and more Vue / Nuxt modules - Vue Router, Pinia, I18n, etc..
+- Этот проект основан на моем [nuxt-core-template](https://github.com/yesfedor/nuxt-core-template), который хостится [тут](https://nuxt-core-template.iny.su/)
+- Все nuxt-core-template видны в проекте шаблона, можете изучить его тоже
+- Что идет далее - не стал переводить, тк не имеет смысла. GitHub Actions также не настраивал для этого "проекта"
+- Не забудьте скопировать `.env` в корень проекта из [./environments/local.env](./environments/local.env)
+- StoryBook есть, но не описан, как по мне, для задания - ту мач
 
 ---
 

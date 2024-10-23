@@ -1,5 +1,6 @@
 /* mixins */
 @use "sass:map";
+@use 'variables' as vars;
 
 @mixin media-max($mediaWidth) {
 	@media only screen and (max-width: $mediaWidth) {
@@ -20,31 +21,51 @@
 }
 
 @mixin bp-desktop-min {
-	@media only screen and (min-width: map.get($breakpoints, desktop-xs)) {
+	@media only screen and (min-width: map.get(vars.$breakpoints, desktop-xs)) {
 		@content;
 	}
 }
 
 @mixin bp-tablet-max {
-	@media only screen and (max-width: map.get($breakpoints, tablet)) {
+	@media only screen and (max-width: map.get(vars.$breakpoints, tablet)) {
 		@content;
 	}
 }
 
 @mixin bp-tablet-min {
-	@media only screen and (min-width: map.get($breakpoints, tablet-xs)) {
+	@media only screen and (min-width: map.get(vars.$breakpoints, tablet-xs)) {
 		@content;
 	}
 }
 
 @mixin bp-mobile-max {
-	@media only screen and (max-width: map.get($breakpoints, mobile)) {
+	@media only screen and (max-width: map.get(vars.$breakpoints, mobile)) {
 		@content;
 	}
 }
 
 @mixin bp-mobile-min {
-	@media only screen and (max-width: map.get($breakpoints, mobile-xs)) {
+	@media only screen and (max-width: map.get(vars.$breakpoints, mobile-xs)) {
 		@content;
 	}
+}
+
+@mixin typography-font-display {
+  font-family: map.get(vars.$typography, 'display'), Roboto, system-ui;
+  font-feature-settings: 'liga' off, 'clig' off;
+}
+
+@mixin typography-font-text {
+  font-family: map.get(vars.$typography, 'text'), Roboto, system-ui;
+  font-feature-settings: 'liga' off, 'clig' off;
+}
+
+@mixin typography-h1 {
+  color: map.get(vars.$colors, 'text-body');
+  font-family: "SF Pro Text";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.45px;
 }

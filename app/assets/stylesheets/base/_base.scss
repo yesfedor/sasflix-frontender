@@ -1,5 +1,40 @@
+@use 'sass:map';
+@use '../abstracts/variables' as vars;
+
 html,
 body {
-	margin: 0;
-	padding: 0;
+  color: map.get(vars.$colors, 'text-body');
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -1px;
+
+  @include typography-font-text;
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+svg, svg > path {
+  transition: unset;
+}
+
+.ui-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.078px;
+}
+
+.ui-link {
+  color: map.get(vars.$colors, 'accent');
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.078px;
 }

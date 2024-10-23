@@ -24,6 +24,8 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/stylesheets/main.scss',
+    '~/assets/stylesheets/themes/fonts/san-francisco-pro-display/_stylesheet.css',
+    '~/assets/stylesheets/themes/fonts/san-francisco-pro-text/_stylesheet.css',
   ],
 
   devServer: {
@@ -85,7 +87,7 @@ export default defineNuxtConfig({
     // https://eslint.nuxt.com/packages/module
     '@nuxt/eslint',
     // https://nuxt.com/modules/stylelint
-    '@nuxtjs/stylelint-module',
+    // '@nuxtjs/stylelint-module',
     // https://nuxt.com/modules/pinia
     '@pinia/nuxt',
     // https://nuxt.com/modules/vite-pwa-nuxt
@@ -115,6 +117,10 @@ export default defineNuxtConfig({
 
   pwa: pwaConfig,
 
+  routeRules: {
+    '/proxy/api/**': { proxy: { to: 'https://dummyjson.com/**' } },
+  },
+
   runtimeConfig: {
     public: {
       APP_DEBUG: Boolean(process.env.APP_DEBUG),
@@ -122,6 +128,7 @@ export default defineNuxtConfig({
       BASE_URL: String(process.env.BASE_URL),
       DEBUG: Boolean(process.env.DEBUG),
       NUXT_SSR: Boolean(process.env.NUXT_SSR),
+      API_ENDPOINT: `${process.env.BASE_URL}/proxy/api`,
     },
   },
 

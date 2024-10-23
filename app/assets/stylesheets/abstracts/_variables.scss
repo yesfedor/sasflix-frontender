@@ -8,3 +8,18 @@ $breakpoints: (
 	mobile: 767px,
 	mobile-xs: 0,
 );
+$colors: (
+  accent: #FF6B00,
+  danger: #FF3B30,
+  text-on-danger: #FFF,
+  text-action: #040405,
+  text-on-action: rgba(255, 255, 255, 0.95),
+  text-body: #05090E,
+  panel: rgba(4, 4, 5, 0.04),
+  text-muted: rgba(4, 4, 5, 0.22),
+  fills-quaternary: rgba(120, 120, 128, 0.08),
+);
+$typography: (
+  display: 'SF Pro Display',
+  text: 'SF Pro Text',
+);
