@@ -2,7 +2,7 @@
 const posts = await useAsyncData('posts', apiPosts)
 
 useHeadSafe({
-  title: 'ikakprosto - posts',
+  title: 'ikakprosto',
 })
 </script>
 

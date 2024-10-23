@@ -1,6 +1,4 @@
-interface ApiPostResponse {
-  data: unknown
-}
+interface ApiPostResponse extends ApiPostItem {}
 
 export interface ApiPostItemReactions {
   likes: number
@@ -20,7 +18,7 @@ export interface ApiPostItem {
 export async function apiPostById(id: number) {
   try {
     const config = useRuntimeConfig()
-    const endpoint = `${config.public.API_ENDPOINT}/posts/${id}/comments`
+    const endpoint = `${config.public.API_ENDPOINT}/posts/${id}`
     return await $fetch<ApiPostResponse>(endpoint)
   } catch (e) {
     useConsole().warn('apiPosts', 'error', e)
